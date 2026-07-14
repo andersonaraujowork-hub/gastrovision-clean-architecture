@@ -1,0 +1,184 @@
+{
+  "info": {
+    "name": "GastroVision API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User Types",
+      "item": [
+        {
+          "name": "Criar Tipo de Usuário",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "http://localhost:8080/api/user-types", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "user-types"] },
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Dono de Restaurante\"\n}", "options": { "raw": { "language": "json" } } }
+          }
+        },
+        {
+          "name": "Listar Tipos de Usuário",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:8080/api/user-types", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "user-types"] }
+          }
+        },
+        {
+          "name": "Buscar Tipo de Usuário por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:8080/api/user-types/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "user-types", "1"] }
+          }
+        },
+        {
+          "name": "Atualizar Tipo de Usuário",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "http://localhost:8080/api/user-types/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "user-types", "1"] },
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Cliente\"\n}", "options": { "raw": { "language": "json" } } }
+          }
+        },
+        {
+          "name": "Deletar Tipo de Usuário",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "http://localhost:8080/api/user-types/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "user-types", "1"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Criar Usuário",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "http://localhost:8080/api/users", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "users"] },
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"João Silva\",\n  \"email\": \"joao@email.com\",\n  \"userTypeId\": 1\n}", "options": { "raw": { "language": "json" } } }
+          }
+        },
+        {
+          "name": "Listar Usuários",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:8080/api/users", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "users"] }
+          }
+        },
+        {
+          "name": "Buscar Usuário por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:8080/api/users/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "users", "1"] }
+          }
+        },
+        {
+          "name": "Atualizar Usuário",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "http://localhost:8080/api/users/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "users", "1"] },
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"João Atualizado\",\n  \"email\": \"joao.novo@email.com\",\n  \"userTypeId\": 1\n}", "options": { "raw": { "language": "json" } } }
+          }
+        },
+        {
+          "name": "Deletar Usuário",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "http://localhost:8080/api/users/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "users", "1"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Restaurants",
+      "item": [
+        {
+          "name": "Criar Restaurante",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "http://localhost:8080/api/restaurants", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "restaurants"] },
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Cantina Italiana\",\n  \"address\": \"Rua das Flores, 123\",\n  \"cuisineType\": \"Italiana\",\n  \"openingHours\": \"11:00-23:00\",\n  \"ownerId\": 1\n}", "options": { "raw": { "language": "json" } } }
+          }
+        },
+        {
+          "name": "Listar Restaurantes",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:8080/api/restaurants", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "restaurants"] }
+          }
+        },
+        {
+          "name": "Buscar Restaurante por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:8080/api/restaurants/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "restaurants", "1"] }
+          }
+        },
+        {
+          "name": "Atualizar Restaurante",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "http://localhost:8080/api/restaurants/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "restaurants", "1"] },
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Cantina Italiana Atualizada\",\n  \"address\": \"Av. Paulista, 456\",\n  \"cuisineType\": \"Italiana\",\n  \"openingHours\": \"12:00-22:00\",\n  \"ownerId\": 1\n}", "options": { "raw": { "language": "json" } } }
+          }
+        },
+        {
+          "name": "Deletar Restaurante",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "http://localhost:8080/api/restaurants/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "restaurants", "1"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Menu Items",
+      "item": [
+        {
+          "name": "Criar Item do Cardápio",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "http://localhost:8080/api/restaurants/1/menu-items", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "restaurants", "1", "menu-items"] },
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Pizza Margherita\",\n  \"description\": \"Molho de tomate, mussarela e manjericão\",\n  \"price\": 45.90,\n  \"onSiteOnly\": false,\n  \"photoPath\": \"/images/pizza-margherita.jpg\"\n}", "options": { "raw": { "language": "json" } } }
+          }
+        },
+        {
+          "name": "Listar Itens do Cardápio",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:8080/api/restaurants/1/menu-items", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "restaurants", "1", "menu-items"] }
+          }
+        },
+        {
+          "name": "Buscar Item do Cardápio por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "http://localhost:8080/api/restaurants/1/menu-items/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "restaurants", "1", "menu-items", "1"] }
+          }
+        },
+        {
+          "name": "Atualizar Item do Cardápio",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": { "raw": "http://localhost:8080/api/restaurants/1/menu-items/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "restaurants", "1", "menu-items", "1"] },
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Pizza Calabresa\",\n  \"description\": \"Molho de tomate, mussarela e calabresa\",\n  \"price\": 49.90,\n  \"onSiteOnly\": true,\n  \"photoPath\": \"/images/pizza-calabresa.jpg\"\n}", "options": { "raw": { "language": "json" } } }
+          }
+        },
+        {
+          "name": "Deletar Item do Cardápio",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "http://localhost:8080/api/restaurants/1/menu-items/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["api", "restaurants", "1", "menu-items", "1"] }
+          }
+        }
+      ]
+    }
+  ]
+}
